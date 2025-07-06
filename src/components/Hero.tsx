@@ -3,20 +3,20 @@ import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { ChevronDown, Download } from 'lucide-react';
+import profileImage from '../assets/photo.jpg';
 
-const AnimatedSphere = () => {
-  return (
-    <Sphere visible args={[1, 100, 200]} scale={2}>
-      <MeshDistortMaterial
-        color="#3B82F6"
-        attach="material"
-        distort={0.3}
-        speed={1.5}
-        roughness={0.4}
-      />
-    </Sphere>
-  );
-};
+
+const AnimatedSphere = () => (
+  <Sphere visible args={[1, 100, 200]} scale={2}>
+    <MeshDistortMaterial
+      color="#3B82F6"
+      attach="material"
+      distort={0.3}
+      speed={1.5}
+      roughness={0.4}
+    />
+  </Sphere>
+);
 
 const Hero: React.FC = () => {
   const scrollToNext = () => {
@@ -27,15 +27,24 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Gradient Background */}
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20" />
-      
-      {/* 3D Background */}
+
+      {/* 3D Background Sphere */}
       <div className="absolute inset-0 opacity-30">
         <Canvas>
           <Suspense fallback={null}>
-            <OrbitControls enableZoom={false} enablePan={false} enableRotate={true} autoRotate autoRotateSpeed={0.5} />
+            <OrbitControls
+              enableZoom={false}
+              enablePan={false}
+              enableRotate={true}
+              autoRotate
+              autoRotateSpeed={0.5}
+            />
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <AnimatedSphere />
@@ -43,55 +52,50 @@ const Hero: React.FC = () => {
         </Canvas>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+        {/* Left Content */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full md:w-1/2 text-center md:text-left"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
-          >
-           KARTHIKEYAN R R
-          </motion.h1>
-          
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+              HI I'M KARTHIKEYAN
+          </h1>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9 }}
-            className="text-xl md:text-2xl text-white/80 mb-8 font-light"
-          >
-           Java Full-Stack Developer & Creative Problem Solver
-          </motion.p>
+  animate={{ x: [0, 10, -10, 0], opacity: [1, 0.7, 1] }}
+  transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+  className="text-white/80 text-lg md:text-xl mb-4 font-light"
+>
+  JAVA FULL STACK DEVELOPER
+</motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.1 }}
-            className="text-lg text-white/60 mb-12 max-w-2xl mx-auto"
-          >
-            Crafting beautiful, functional, and user-centered digital experiences with modern technologies and innovative solutions.
-          </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+
+          {/* Roles as Equal-Size Badges */}
+          <div className="flex flex-wrap gap-3 mb-8 justify-center md:justify-start">
+            {['Java Developer', 'Frontend Developer', 'AI Enthusiast', 'Full Stack Engineer'].map((role) => (
+              <span
+                key={role}
+                className="bg-white/10 text-white text-sm px-4 py-2 rounded-full font-medium shadow-md border border-white/20"
+              >
+                {role}
+              </span>
+            ))}
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <span>Let's Connect</span>
+              Let's Connect
             </motion.button>
-            
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -101,7 +105,24 @@ const Hero: React.FC = () => {
               <Download className="w-5 h-5" />
               <span>Download Resume</span>
             </motion.button>
-          </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Right Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full md:w-1/2 flex justify-center"
+        >
+         <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full shadow-2xl bg-gradient-to-br from-blue-500/30 to-purple-600/30 p-1 hover:scale-105 transition-transform duration-300">
+
+            <img
+              src={profileImage} // Replace with your image path
+              alt="profile"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
         </motion.div>
 
         {/* Scroll Indicator */}

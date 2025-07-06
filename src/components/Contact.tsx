@@ -30,17 +30,27 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formspree.io/f/mvgryykp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      } else {
+        console.error('Form submission failed:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1000);
+    }
   };
 
   const containerVariants = {
@@ -69,19 +79,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'karthikeyan1234keyan@gamil.com',
-      href: 'karthikeyan1234keyan@gmail.com',
+      value: 'karthikeyan1234keyan@gmail.com',
+      href: 'mailto:karthikeyan1234keyan@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
       value: '8939650715',
-      href: '8939650715',
+      href: 'tel:8939650715',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Padi,Chennai',
+      value: 'Padi, Chennai',
       href: '#',
     },
   ];
@@ -89,7 +99,6 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-900/10 to-transparent" />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -117,7 +126,7 @@ const Contact: React.FC = () => {
                   Whether you're looking for a developer, have a project in mind, or just want to say hello, 
                   I'd love to hear from you.
                 </p>
-                
+
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <motion.a
@@ -145,16 +154,11 @@ const Contact: React.FC = () => {
             <motion.div variants={itemVariants}>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      className="space-y-2"
-                    >
-                      <label htmlFor="name" className="text-white/80 text-sm font-medium">
-                        Name
-                      </label>
+                    <motion.div whileFocus={{ scale: 1.02 }} className="space-y-2">
+                      <label htmlFor="name" className="text-white/80 text-sm font-medium">Name</label>
                       <input
                         type="text"
                         id="name"
@@ -162,18 +166,13 @@ const Contact: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                         placeholder="Your Name"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                       />
                     </motion.div>
-                    
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      className="space-y-2"
-                    >
-                      <label htmlFor="email" className="text-white/80 text-sm font-medium">
-                        Email
-                      </label>
+
+                    <motion.div whileFocus={{ scale: 1.02 }} className="space-y-2">
+                      <label htmlFor="email" className="text-white/80 text-sm font-medium">Email</label>
                       <input
                         type="email"
                         id="email"
@@ -181,19 +180,14 @@ const Contact: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                         placeholder="your.email@example.com"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                       />
                     </motion.div>
                   </div>
-                  
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="space-y-2"
-                  >
-                    <label htmlFor="subject" className="text-white/80 text-sm font-medium">
-                      Subject
-                    </label>
+
+                  <motion.div whileFocus={{ scale: 1.02 }} className="space-y-2">
+                    <label htmlFor="subject" className="text-white/80 text-sm font-medium">Subject</label>
                     <input
                       type="text"
                       id="subject"
@@ -201,18 +195,13 @@ const Contact: React.FC = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                       placeholder="What's this about?"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                     />
                   </motion.div>
-                  
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="space-y-2"
-                  >
-                    <label htmlFor="message" className="text-white/80 text-sm font-medium">
-                      Message
-                    </label>
+
+                  <motion.div whileFocus={{ scale: 1.02 }} className="space-y-2">
+                    <label htmlFor="message" className="text-white/80 text-sm font-medium">Message</label>
                     <textarea
                       id="message"
                       name="message"
@@ -220,11 +209,11 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       rows={5}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 resize-none"
                       placeholder="Tell me about your project..."
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 resize-none"
                     />
                   </motion.div>
-                  
+
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}

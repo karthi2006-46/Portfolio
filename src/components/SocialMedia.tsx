@@ -1,48 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, Linkedin, Twitter, Instagram, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Mail, ExternalLink, CheckCircle } from 'lucide-react';
 
 const SocialMedia: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  const [subscriberEmail, setSubscriberEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = async () => {
+  if (!subscriberEmail) return;
+
+  try {
+    const response = await fetch("https://formspree.io/f/mvgryykp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email: subscriberEmail })
+    });
+
+    if (response.ok) {
+      setSubscribed(true);
+      setSubscriberEmail('');
+      setTimeout(() => setSubscribed(false), 3000);
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  } catch (error) {
+    console.error("Subscription error:", error);
+    alert("Network error. Please try again.");
+  }
+};
+
 
   const socialLinks = [
     {
       platform: 'GitHub',
-      username: '@johndoe',
-      followers: '2.1K',
+      username: 'karthi2006-46',
       icon: Github,
-      url: 'https://github.com/johndoe',
+      url: 'https://github.com/karthi2006-46',
       color: 'from-gray-700 to-gray-900',
       description: 'Open source projects and contributions',
     },
     {
       platform: 'LinkedIn',
-      username: 'John Doe',
-      followers: '3.5K',
+      username: 'karthikeyan',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/johndoe',
+      url: 'https://www.linkedin.com/in/karthi-keyan-5349a028a/',
       color: 'from-blue-600 to-blue-800',
       description: 'Professional network and career updates',
     },
     {
       platform: 'Twitter',
-      username: '@johndoe_dev',
-      followers: '1.8K',
+      username: '@karthi_46x',
       icon: Twitter,
-      url: 'https://twitter.com/johndoe_dev',
+      url: 'https://x.com/karthi_46x',
       color: 'from-sky-400 to-sky-600',
       description: 'Tech insights and industry discussions',
     },
     {
       platform: 'Instagram',
-      username: '@johndoe.dev',
-      followers: '892',
+      username: 'karthi_46x',
       icon: Instagram,
-      url: 'https://instagram.com/johndoe.dev',
+      url: 'https://www.instagram.com/karthi_46x/?next=%2F',
       color: 'from-pink-500 to-purple-600',
       description: 'Behind the scenes and lifestyle content',
     },
@@ -73,7 +95,6 @@ const SocialMedia: React.FC = () => {
   return (
     <section id="social" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-gray-900/20" />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -92,7 +113,7 @@ const SocialMedia: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.a
                 key={social.platform}
                 href={social.url}
@@ -110,15 +131,9 @@ const SocialMedia: React.FC = () => {
                     </div>
                     <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-white/80 transition-colors" />
                   </div>
-                  
                   <h3 className="text-lg font-bold text-white mb-1">{social.platform}</h3>
                   <p className="text-white/60 text-sm mb-2">{social.username}</p>
                   <p className="text-white/80 text-sm mb-3">{social.description}</p>
-                  
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xl font-bold text-white">{social.followers}</span>
-                    <span className="text-white/60 text-sm">followers</span>
-                  </div>
                 </div>
               </motion.a>
             ))}
@@ -133,21 +148,31 @@ const SocialMedia: React.FC = () => {
                 <p className="text-white/70 mb-6">
                   Subscribe to my newsletter for weekly insights, project updates, and exclusive content.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                   <input
                     type="email"
+                    value={subscriberEmail}
+                    onChange={(e) => setSubscriberEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
                   />
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={handleSubscribe}
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     Subscribe
                   </motion.button>
                 </div>
+
+                {subscribed && (
+                  <div className="mt-4 flex items-center justify-center space-x-2 text-green-400">
+                    <CheckCircle className="w-5 h-5" />
+                    <p className="font-medium">Subscribed successfully!</p>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
@@ -156,11 +181,10 @@ const SocialMedia: React.FC = () => {
           <motion.div variants={itemVariants} className="mt-16 pt-8 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-white/60">
-                <p>&copy; 2024 John Doe. All rights reserved.</p>
+                <p>&copy; 2024 Karthikeyan. All rights reserved.</p>
               </div>
-              
               <div className="flex space-x-6">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.platform}
                     href={social.url}
