@@ -1,75 +1,87 @@
-💼 Personal Portfolio Website
-🚀 Live Demo
-🔗 View Portfolio
-📁 GitHub Repository
+# 💼 Personal Portfolio Website
 
-📖 About the Project
-This is a modern, fully responsive, interactive portfolio website built with React, Framer Motion, and Three.js. It showcases my technical skills, featured projects, certifications, and contact details — crafted to impress recruiters and clients.
+### 🚀 Live Demo  
+🔗 [View Portfolio](https://karthi2006-46.github.io/portfoliokarthi/)  
+📁 [GitHub Repository](https://github.com/karthi2006-46/portfoliokarthi.git)
 
-✨ Features
-🖼️ Hero section with 3D animations using @react-three/fiber
+---
 
-🧠 Tech stack and skills section
+## 📖 About the Project
 
-🛠️ Projects with modal preview and GitHub/demo links
+This is a modern and responsive **personal portfolio website** built using **React**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Three.js**. It showcases my skills, projects, resume, certifications, and contact information in an interactive and professional format — tailored to grab attention from recruiters and potential clients.
 
-📜 Resume section with downloadable CV
+---
 
-🏆 Certifications and achievements
+## ✨ Features
 
-📱 Fully responsive for mobile and desktop
+- 🎯 Interactive Hero section with 3D animation using `@react-three/fiber`
+- 💡 Tech Stack and Skills overview
+- 📂 Projects section with modal previews and GitHub links
+- 📄 Downloadable Resume
+- 🏅 Certification Showcase
+- 📞 Contact form with Formspree integration
+- 📱 Fully responsive (mobile & desktop)
+- ⚡ Smooth UI animations with Framer Motion
 
-🌌 Smooth animations using Framer Motion
+---
 
-📬 Contact section with Formspree integration
+## ⚙️ Tech Stack
 
-⚙️ Tech Stack
-Category	Tools/Technologies
-Frontend	React, TypeScript, Tailwind CSS
-Animations	Framer Motion, Three.js, @react-three/fiber
-Icons	Lucide React Icons
-Forms	Formspree (for contact form)
-Hosting	GitHub Pages / Vercel
+| Category      | Tools/Technologies                             |
+|---------------|------------------------------------------------|
+| **Frontend**  | React, TypeScript, Tailwind CSS                |
+| **Animations**| Framer Motion, Three.js, @react-three/fiber    |
+| **Forms**     | Formspree                                      |
+| **Icons**     | Lucide React                                   |
+| **Hosting**   | GitHub Pages                                   |
 
-📂 Project Structure
-bash
-Copy
-Edit
+---
+
+## 📁 Folder Structure
+
 /src
- ┣ /components
- ┃ ┣ Hero.tsx
- ┃ ┣ Projects.tsx
- ┃ ┣ Resume.tsx
- ┃ ┣ Contact.tsx
- ┃ ┗ ...
- ┣ /assets
- ┣ App.tsx
- ┗ index.tsx
-🛠️ Setup & Run Locally
-bash
-Copy
-Edit
-# Clone the repository
+┣ /components
+┃ ┣ Hero.tsx
+┃ ┣ Projects.tsx
+┃ ┣ Resume.tsx
+┃ ┣ Contact.tsx
+┃ ┗ ...
+┣ /assets
+┣ App.tsx
+┗ main.tsx
+
+---
+
+## 🛠️ Installation and Setup
+
+1. Clone the repository:
+
+```bash
 git clone https://github.com/karthi2006-46/portfoliokarthi.git
 cd portfoliokarthi
 
-# Install dependencies
+2.Install dependencies:
 npm install
+Start the development server:
 
-# Start the development server
+bash
+Copy
+Edit
 npm run dev
 📄 Resume
-You can download my resume directly from the portfolio, or access it here if hosted.
+You can download my resume from the Resume section on the website or click here.
 
-🙋‍♂️ Author
+🙋‍♂️ About Me
 KARTHIKEYAN R R
 🎓 BCA Student | Java Full Stack Developer
 📍 Chennai, India
-📧 karthikeyan1234keyan@gmail.com
+
+📧 Email: karthikeyan1234keyan@gmail.com
 🔗 LinkedIn
 🐙 GitHub
 🐦 Twitter
 📸 Instagram
 
 📜 License
-This project is open source and available under the MIT License.
+This project is licensed under the MIT License.
+
