@@ -27,95 +27,54 @@ const Certificates: React.FC = () => {
   const certificates: Certificate[] = [
     {
       id: 1,
-      title: 'AWS Certified Solutions Architect - Associate',
-      organization: 'Amazon Web Services',
-      date: '2024-01-15',
-      category: 'Cloud Computing',
-      image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400',
-      pdfUrl: '#',
+      title: 'SOFTWARE TESTING  (Both Manual and Automated)',
+      organization: 'TAMILNADU ADVANCED TECHNICAL TRAINING INSTITUTE',
+      date: '2024-11-19',
+      category: 'Testing',
+      image:  'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
+
+
+      pdfUrl: '/certificates/testing.pdf',
       description: 'Validates expertise in designing distributed systems on AWS platform.',
-      skills: ['AWS', 'Cloud Architecture', 'Security', 'Scalability'],
+      skills: ['SDLC & STLC', 'Test Case Design', 'Bug Reporting and Tracking','Java / Python ', 'Requirement Analysis'],
     },
     {
       id: 2,
-      title: 'React Developer Certification',
-      organization: 'Meta (Facebook)',
-      date: '2023-11-20',
-      category: 'Web Development',
-      image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: '',
+      organization: '',
+      date: '',
+      category: '',
+      image: '',
       pdfUrl: '#',
-      description: 'Professional certification in React development and modern JavaScript.',
-      skills: ['React', 'JavaScript', 'JSX', 'Hooks'],
+      description: '',
+      skills: [''],
     },
     {
       id: 3,
-      title: 'Google Cloud Professional Developer',
-      organization: 'Google Cloud',
-      date: '2023-09-10',
-      category: 'Cloud Computing',
-      image: 'https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: '',
+      organization: '',
+      date: '',
+      category: '',
+      image: '',
       pdfUrl: '#',
-      description: 'Demonstrates ability to build scalable applications on Google Cloud Platform.',
-      skills: ['GCP', 'Kubernetes', 'Docker', 'Microservices'],
+      description: '',
+      skills: [''],
     },
     {
       id: 4,
-      title: 'Machine Learning Specialization',
-      organization: 'Stanford University (Coursera)',
-      date: '2023-07-25',
-      category: 'AI/ML',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: '',
+      organization: '',
+      date: '',
+      category: '',
+      image: '',
       pdfUrl: '#',
-      description: 'Comprehensive course covering machine learning algorithms and applications.',
-      skills: ['Python', 'TensorFlow', 'Neural Networks', 'Data Science'],
+      description: '',
+      skills: [''],
     },
-    {
-      id: 5,
-      title: 'Certified Kubernetes Administrator',
-      organization: 'Cloud Native Computing Foundation',
-      date: '2023-05-18',
-      category: 'DevOps',
-      image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=400',
-      pdfUrl: '#',
-      description: 'Validates skills in Kubernetes cluster administration and management.',
-      skills: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Linux'],
-    },
-    {
-      id: 6,
-      title: 'Full Stack Web Development',
-      organization: 'freeCodeCamp',
-      date: '2023-03-12',
-      category: 'Web Development',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400',
-      pdfUrl: '#',
-      description: 'Comprehensive certification covering front-end and back-end development.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB'],
-    },
-    {
-      id: 7,
-      title: 'Deep Learning Specialization',
-      organization: 'DeepLearning.AI',
-      date: '2023-01-30',
-      category: 'AI/ML',
-      image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=400',
-      pdfUrl: '#',
-      description: 'Advanced specialization in deep learning and neural network architectures.',
-      skills: ['Deep Learning', 'CNN', 'RNN', 'PyTorch'],
-    },
-    {
-      id: 8,
-      title: 'Cybersecurity Fundamentals',
-      organization: 'IBM',
-      date: '2022-12-08',
-      category: 'Security',
-      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=400',
-      pdfUrl: '#',
-      description: 'Foundation course in cybersecurity principles and best practices.',
-      skills: ['Security', 'Risk Assessment', 'Incident Response', 'Compliance'],
-    },
+    
   ];
 
-  const categories = ['All', 'Web Development', 'Cloud Computing', 'AI/ML', 'DevOps', 'Security'];
+  const categories = ['All', 'Testing', 'Web Development', 'AI/ML', 'DevOps', 'Security'];
 
   const filteredCertificates = activeFilter === 'All' 
     ? certificates 
@@ -353,15 +312,18 @@ const Certificates: React.FC = () => {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span>View Certificate</span>
-                  </motion.button>
-                  
+                  <motion.a
+  href={selectedCertificate.pdfUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
+>
+  <ExternalLink className="w-5 h-5" />
+  <span>View Certificate</span>
+</motion.a>
+
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

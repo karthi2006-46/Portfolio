@@ -54,24 +54,31 @@ const Resume: React.FC = () => {
 
   const education = [
     {
-      institution: 'University of Technology',
-      degree: 'Master of Computer Science',
-      period: '2017 - 2019',
-      description: 'Specialized in Software Engineering and Web Technologies.',
+      institution: 'Dr. M.G.R. Educational And Research Institute',
+      degree: 'Bachelor of Computer Applications (BCA)',
+      period: '2025 ("Pursuing")',
+      description: 'Currently pursuing BCA with a focus on programming, web development, and database management. Gaining practical knowledge through academic projects and continuous hands-on learning in technologies such as Java, HTML/CSS, SQL, and JavaScript.',
     },
     {
-      institution: 'State University',
-      degree: 'Bachelor of Computer Science',
-      period: '2013 - 2017',
-      description: 'Core computer science fundamentals and programming languages.',
-    },
+    institution: 'ICF Higher Secondary School',
+    degree: 'HSC – Higher Secondary Certificate',
+    period: '2021 – 2023',
+    description:
+      'Completed Higher Secondary education under Tamil Nadu State Board with a specialization in Commerce with Computer Applications. Gained foundational knowledge in programming, accounting, business studies, and economics.',
+  },
+  {
+    institution: 'Britannia High School',
+    degree: 'SSLC – Secondary School Leaving Certificate',
+    period: '2019 – 2021',
+    description:
+      'Completed 10th standard with a strong base in Mathematics, Science, Social Science, and Computer basics. Developed early interest in computer applications and digital systems.',
+  },
   ];
 
   const achievements = [
-    'AWS Certified Solutions Architect',
-    'React Developer Certification',
-    'Winner - Tech Innovation Award 2023',
-    'Speaker at React Conference 2022',
+    'Apolo Certified Solutions Architect',
+    'Java  Developer Certification',
+    'Software Tesing -2024',
     'Open Source Contributor - 50+ repositories',
   ];
 
@@ -79,7 +86,7 @@ const Resume: React.FC = () => {
     // In a real application, this would download an actual PDF file
     const link = document.createElement('a');
     link.href = '/resume.pdf'; // You would place your actual resume PDF in the public folder
-    link.download = 'John_Doe_Resume.pdf';
+    link.download = 'Karthikeyan_Resume.pdf';
     link.click();
   };
 

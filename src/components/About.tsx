@@ -80,10 +80,10 @@ const About: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 text-white">My Journey</h3>
                 <p className="text-white/80 mb-4 leading-relaxed">
-                  With over 5 years of experience in web development, I've had the privilege of working on diverse projects ranging from startup MVPs to enterprise-level applications. My journey began with a curiosity about how things work on the web, and it has evolved into a career driven by continuous learning and innovation.
+                  "Hi, I'm Karthikeyan R R, a BCA student passionate about Java Full Stack Development, with skills in HTML, CSS, MySQL, and Software Testing. I'm eager to apply my knowledge through real-world projects and internships."
                 </p>
                 <p className="text-white/80 leading-relaxed">
-                  I specialize in React, Node.js, and modern web technologies, always staying up-to-date with the latest trends and best practices. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+                  I specialize in Java,MySQL, and modern web technologies, always staying up-to-date with the latest trends and best practices. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
                 </p>
               </div>
             </motion.div>

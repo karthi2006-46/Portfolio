@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { ChevronDown, Download } from 'lucide-react';
-import profileImage from '../assets/photo.jpg';
-
+import profileImage from '../assets/Profile.jpg';
 
 const AnimatedSphere = () => (
   <Sphere visible args={[1, 100, 200]} scale={2}>
@@ -61,17 +60,15 @@ const Hero: React.FC = () => {
           className="w-full md:w-1/2 text-center md:text-left"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-              HI I'M KARTHIKEYAN
+            HI I'M KARTHIKEYAN
           </h1>
           <motion.p
-  animate={{ x: [0, 10, -10, 0], opacity: [1, 0.7, 1] }}
-  transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-  className="text-white/80 text-lg md:text-xl mb-4 font-light"
->
-  JAVA FULL STACK DEVELOPER
-</motion.p>
-
-
+            animate={{ x: [0, 10, -10, 0], opacity: [1, 0.7, 1] }}
+            transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+            className="text-white/80 text-lg md:text-xl mb-4 font-light"
+          >
+            JAVA FULL STACK DEVELOPER
+          </motion.p>
 
           {/* Roles as Equal-Size Badges */}
           <div className="flex flex-wrap gap-3 mb-8 justify-center md:justify-start">
@@ -96,15 +93,19 @@ const Hero: React.FC = () => {
               Let's Connect
             </motion.button>
 
-            <motion.button
+            {/* View Resume Button */}
+            <motion.a
+              href="/resume.pdf" // Ensure the path is correct
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.querySelector('#resume')?.scrollIntoView({ behavior: 'smooth' })}
+              whileTap={{ scale: 0.95 }}o
+              
               className="px-8 py-4 border-2 border-white/30 rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <Download className="w-5 h-5" />
-              <span>Download Resume</span>
-            </motion.button>
+              <span>View Resume</span>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -115,8 +116,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1 }}
           className="w-full md:w-1/2 flex justify-center"
         >
-         <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full shadow-2xl bg-gradient-to-br from-blue-500/30 to-purple-600/30 p-1 hover:scale-105 transition-transform duration-300">
-
+          <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full shadow-2xl bg-gradient-to-br from-blue-500/30 to-purple-600/30 p-1 hover:scale-105 transition-transform duration-300">
             <img
               src={profileImage} // Replace with your image path
               alt="profile"

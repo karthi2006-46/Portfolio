@@ -37,16 +37,17 @@ const Projects: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates',
-      detailedDescription: 'A modern task management application with real-time collaboration features, drag-and-drop interface, team management, and progress tracking.',
-      techStack: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
-      githubUrl: '#',
+      title: 'Portfolio Website',
+      description: 'Interactive 3D portfolio with advanced animations',
+      detailedDescription: 'A cutting-edge portfolio website featuring 3D animations...',
+      techStack: ['React', 'Three.js', 'Framer Motion', 'GSAP', 'WebGL'],
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      demoUrl: '#', // ✅ Put actual link
+      githubUrl: 'https://github.com/karthi2006-46/portfoliokarthi.git',  // ✅ Check this is correct
       featured: true,
     },
-    {
+
+      {
       id: 3,
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for social media management',
@@ -70,11 +71,11 @@ const Projects: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Portfolio Website',
-      description: 'Interactive 3D portfolio with advanced animations',
-      detailedDescription: 'A cutting-edge portfolio website featuring 3D animations, particle effects, and interactive elements.',
-      techStack: ['React', 'Three.js', 'Framer Motion', 'GSAP', 'WebGL'],
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Task Management App',
+      description: 'Collaborative project management tool with real-time updates',
+      detailedDescription: 'A modern task management application with real-time collaboration features, drag-and-drop interface, team management, and progress tracking.',
+      techStack: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
+      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
       demoUrl: '#',
       githubUrl: '#',
       featured: true,

@@ -8,7 +8,6 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import Articles from './components/Articles';
 import CodingProfiles from './components/certificate';
 import SocialMedia from './components/SocialMedia';
 import ParticleBackground from './components/ParticleBackground';
@@ -30,7 +29,6 @@ function App() {
                 <Projects />
                 <Skills />
                 <Resume />
-                <Articles />
                 <CodingProfiles />
                 <Contact />
                 <SocialMedia />
