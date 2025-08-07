@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, easeOut } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Calendar, ExternalLink, X, Filter } from 'lucide-react';
 
@@ -16,11 +16,7 @@ interface Certificate {
 }
 
 const Certificates: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
   const [activeFilter, setActiveFilter] = useState('All');
 
@@ -31,53 +27,27 @@ const Certificates: React.FC = () => {
       organization: 'TAMILNADU ADVANCED TECHNICAL TRAINING INSTITUTE',
       date: '2024-11-19',
       category: 'Testing',
-      image:  'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
-
-
+      image: 'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
       pdfUrl: '/certificates/testing.pdf',
       description: 'Validates expertise in designing distributed systems on AWS platform.',
       skills: ['SDLC & STLC', 'Test Case Design', 'Bug Reporting and Tracking','Java / Python ', 'Requirement Analysis'],
     },
-    {
-      id: 2,
-      title: '',
-      organization: '',
-      date: '',
-      category: '',
-      image: '',
-      pdfUrl: '#',
-      description: '',
-      skills: [''],
-    },
-    {
-      id: 3,
-      title: '',
-      organization: '',
-      date: '',
-      category: '',
-      image: '',
-      pdfUrl: '#',
-      description: '',
-      skills: [''],
-    },
-    {
-      id: 4,
-      title: '',
-      organization: '',
-      date: '',
-      category: '',
-      image: '',
-      pdfUrl: '#',
-      description: '',
-      skills: [''],
-    },
-    
+    // {
+    //   id: 2, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
+    // },
+    // {
+    //   id: 3, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
+    // },
+    // {
+    //   id: 4, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
+    // },
   ];
 
-  const categories = ['All', 'Testing', 'Web Development', 'AI/ML', 'DevOps', 'Security'];
+  const categories = ['All', 'Testing'];
+  // , 'Web Development', 'AI/ML', 'DevOps', ];
 
-  const filteredCertificates = activeFilter === 'All' 
-    ? certificates 
+  const filteredCertificates = activeFilter === 'All'
+    ? certificates
     : certificates.filter(cert => cert.category === activeFilter);
 
   const containerVariants = {
@@ -97,7 +67,7 @@ const Certificates: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: easeOut,
       },
     },
   };
@@ -113,7 +83,6 @@ const Certificates: React.FC = () => {
   return (
     <section id="certificates" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-900/10 to-transparent" />
-      
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -161,15 +130,11 @@ const Certificates: React.FC = () => {
               exit="hidden"
               className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
-              {filteredCertificates.map((certificate, index) => (
+              {filteredCertificates.map((certificate) => (
                 <motion.div
                   key={certificate.id}
                   variants={itemVariants}
-                  whileHover={{ 
-                    y: -10, 
-                    scale: 1.02,
-                    rotateY: 5,
-                  }}
+                  whileHover={{ y: -10, scale: 1.02, rotateY: 5 }}
                   whileTap={{ scale: 0.98 }}
                   className="group cursor-pointer perspective-1000"
                   onClick={() => setSelectedCertificate(certificate)}
@@ -186,21 +151,15 @@ const Certificates: React.FC = () => {
                         <Award className="w-4 h-4" />
                       </div>
                     </div>
-                    
                     <div className="p-4">
                       <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-yellow-300 transition-colors">
                         {certificate.title}
                       </h3>
-                      
-                      <p className="text-yellow-400 font-medium text-sm mb-2">
-                        {certificate.organization}
-                      </p>
-                      
+                      <p className="text-yellow-400 font-medium text-sm mb-2">{certificate.organization}</p>
                       <div className="flex items-center space-x-2 text-white/60 text-sm mb-3">
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(certificate.date)}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-xs font-medium">
                           {certificate.category}
@@ -219,18 +178,15 @@ const Certificates: React.FC = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Certification Summary</h3>
-                <p className="text-white/70">
-                  Continuous learning and professional development across multiple domains
-                </p>
+                <p className="text-white/70">Continuous learning and professional development across multiple domains</p>
               </div>
-              
               <div className="grid md:grid-cols-4 gap-6 text-center">
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{certificates.length}</div>
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">1</div>
                   <div className="text-white/80">Total Certificates</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">{categories.length - 1}</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">1</div>
                   <div className="text-white/80">Specialization Areas</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
@@ -281,10 +237,8 @@ const Certificates: React.FC = () => {
                   <span className="font-semibold">{selectedCertificate.category}</span>
                 </div>
               </div>
-              
               <div className="p-8">
                 <h3 className="text-3xl font-bold text-white mb-4">{selectedCertificate.title}</h3>
-                
                 <div className="flex items-center space-x-6 mb-6">
                   <div>
                     <p className="text-yellow-400 font-semibold text-lg">{selectedCertificate.organization}</p>
@@ -294,9 +248,7 @@ const Certificates: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-white/80 mb-6 leading-relaxed">{selectedCertificate.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-xl font-semibold text-white mb-3">Skills Covered</h4>
                   <div className="flex flex-wrap gap-2">
@@ -310,20 +262,18 @@ const Certificates: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                
                 <div className="flex space-x-4">
                   <motion.a
-  href={selectedCertificate.pdfUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
->
-  <ExternalLink className="w-5 h-5" />
-  <span>View Certificate</span>
-</motion.a>
-
+                    href={selectedCertificate.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    <span>View Certificate</span>
+                  </motion.a>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

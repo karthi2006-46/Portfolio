@@ -79,8 +79,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'karthikeyan1234keyan@gmail.com',
-      href: 'mailto:karthikeyan1234keyan@gmail.com',
+      value: 'rr.karthikeyan2006@gmail.com',
+      href: 'mailto:rr.karthikeyan2006@gmail.com',
     },
     {
       icon: Phone,
@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
       icon: MapPin,
       label: 'Location',
       value: 'Padi, Chennai',
-      href: '#',
+      href: 'https://goo.gl/maps/51AEeyKEsU4GDtcQ6?g_st=aw',
     },
   ];
 

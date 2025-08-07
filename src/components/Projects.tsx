@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, X } from 'lucide-react';
 
+
 interface Project {
   id: number;
   title: string;
@@ -27,11 +28,11 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'Student Database',
-      description: 'Full-stack e-commerce solution with advanced features',
+      description: 'Curd operations to add,delete,view,update',
       detailedDescription: 'A comprehensive e-commerce platform built with React and Node.js, featuring user authentication, payment integration, inventory management, and real-time analytics.',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redis', 'Docker'],
+      techStack: ['Java', 'MySQL'],
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
+      demoUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
       githubUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
       featured: true,
     },
@@ -49,48 +50,48 @@ const Projects: React.FC = () => {
 
       {
       id: 3,
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media management',
-      detailedDescription: 'A comprehensive social media analytics dashboard that aggregates data from multiple platforms, providing insights on engagement, reach, and performance metrics.',
-      techStack: ['Vue.js', 'Python', 'FastAPI', 'Chart.js', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
-      githubUrl: '#',
+      title: ' Event Registration Form',
+      description: 'A simple and responsive HTML & CSS form for user registration to an event.',
+      detailedDescription: 'A clean, user-friendly web form built with HTML and styled using CSS, designed to collect participant details such as name, email, contact number, and event preferences for seamless event registration.',
+      techStack: ['HTML', 'CSS'],
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_W-HEjNco3W3XWwlNUABayQp9acfWQlWaw&s',
+      demoUrl: 'https://karthi2006-46.github.io/Event/',
+      githubUrl: 'https://github.com/karthi2006-46/Event.git',
       featured: false,
     },
-    {
-      id: 4,
-      title: 'Weather App',
-      description: 'Beautiful weather app with location-based forecasts',
-      detailedDescription: 'A sleek weather application featuring location-based forecasts, interactive maps, weather alerts, and detailed meteorological data.',
-      techStack: ['React Native', 'OpenWeather API', 'Maps SDK', 'Redux'],
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false,
-    },
-    {
-      id: 5,
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates',
-      detailedDescription: 'A modern task management application with real-time collaboration features, drag-and-drop interface, team management, and progress tracking.',
-      techStack: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: true,
-    },
-    {
-      id: 6,
-      title: 'Learning Management System',
-      description: 'Educational platform with course management and progress tracking',
-      detailedDescription: 'A comprehensive learning management system with course creation tools, student progress tracking, interactive assignments, and video streaming capabilities.',
-      techStack: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'AWS S3'],
-      image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false,
-    },
+    // {
+    //   id: 4,
+    //   title: 'Weather App',
+    //   description: 'Beautiful weather app with location-based forecasts',
+    //   detailedDescription: 'A sleek weather application featuring location-based forecasts, interactive maps, weather alerts, and detailed meteorological data.',
+    //   techStack: ['React Native', 'OpenWeather API', 'Maps SDK', 'Redux'],
+    //   image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   demoUrl: '#',
+    //   githubUrl: '#',
+    //   featured: false,
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Task Management App',
+    //   description: 'Collaborative project management tool with real-time updates',
+    //   detailedDescription: 'A modern task management application with real-time collaboration features, drag-and-drop interface, team management, and progress tracking.',
+    //   techStack: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
+    //   image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   demoUrl: '#',
+    //   githubUrl: '#',
+    //   featured: true,
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Learning Management System',
+    //   description: 'Educational platform with course management and progress tracking',
+    //   detailedDescription: 'A comprehensive learning management system with course creation tools, student progress tracking, interactive assignments, and video streaming capabilities.',
+    //   techStack: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'AWS S3'],
+    //   image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   demoUrl: '#',
+    //   githubUrl: '#',
+    //   featured: false,
+    // },
   ];
 
   const containerVariants = {
@@ -102,13 +103,17 @@ const Projects: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1], // ✅ fixed
     },
-  };
+  },
+};
+
 
   return (
     <section id="projects" className="py-20 relative">

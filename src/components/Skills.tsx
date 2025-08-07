@@ -8,25 +8,25 @@ const Skills: React.FC = () => {
     threshold: 0.1,
   });
 
-  const categories = ['All', 'Frontend', 'Backend', 'Language', 'Database', 'DevOps', 'Cloud', 'Tools', 'API'];
+  const categories = ['All', 'Frontend', 'Backend', 'Language', 'Database', 'Version Control','IDE'];
   const [activeFilter, setActiveFilter] = React.useState('All');
 
   const skills = [
-    {
-      name: 'React',
-      level: 95,
-      category: 'Frontend',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-      color: '#61DAFB'
-    },
-    {
-      name: 'TypeScript',
-      level: 90,
-      category: 'Language',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-      color: '#3178C6'
-    },
-    
+    // {
+    //   name: 'React',
+    //   level: 95,
+    //   category: 'Frontend',
+    //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    //   color: '#61DAFB'
+    // },
+    // // {
+    // //   name: 'TypeScript',
+    // //   level: 90,
+    // //   category: 'Language',
+    // //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    // //   color: '#3178C6'
+    // // }
+    // ,
  {
   name: 'Java',
   level: 90,
@@ -55,7 +55,38 @@ const Skills: React.FC = () => {
   category: 'Database',
   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
   color: '#4479A1'
-}
+},
+
+  {
+    name: 'Git',
+    level: 85,
+    category: 'Version Control',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+    color: '#F05032'
+  },
+  {
+    name: 'GitHub',
+    level: 85,
+    category: 'Version Control',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+    color: '#181717'
+  },
+  {
+    name: 'Visual Studio',
+    level: 80,
+    category: 'IDE',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-plain.svg',
+    color: '#5C2D91'
+  },
+  {
+    name: 'Eclipse',
+    level: 75,
+    category: 'IDE',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg',
+    color: '#2C2255'
+  }
+
+
 
 
     // Add the remaining skill objects here...

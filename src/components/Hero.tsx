@@ -67,12 +67,12 @@ const Hero: React.FC = () => {
             transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
             className="text-white/80 text-lg md:text-xl mb-4 font-light"
           >
-            JAVA FULL STACK DEVELOPER
+          Aspiring Java Full Stack Developer
           </motion.p>
 
           {/* Roles as Equal-Size Badges */}
           <div className="flex flex-wrap gap-3 mb-8 justify-center md:justify-start">
-            {['Java Developer', 'Frontend Developer', 'AI Enthusiast', 'Full Stack Engineer'].map((role) => (
+            {['Java Learner', 'Frontend Developer', 'AI Enthusiast', 'Full Stack Student'].map((role) => (
               <span
                 key={role}
                 className="bg-white/10 text-white text-sm px-4 py-2 rounded-full font-medium shadow-md border border-white/20"
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
 
             {/* View Resume Button */}
             <motion.a
-              href="/resume.pdf" // Ensure the path is correct
+              href="public/certificates/resume.pdf" // Ensure the path is correct
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

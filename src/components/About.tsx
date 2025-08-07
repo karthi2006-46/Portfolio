@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Code, Lightbulb, Heart, Zap } from 'lucide-react';
 
+
 const About: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
