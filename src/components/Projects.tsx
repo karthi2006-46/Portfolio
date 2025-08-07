@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: 'Student Database',
       description: 'Curd operations to add,delete,view,update',
-      detailedDescription: 'A comprehensive e-commerce platform built with React and Node.js, featuring user authentication, payment integration, inventory management, and real-time analytics.',
+      detailedDescription: 'A dynamic Student Database Management System built using Java and MySQL, designed to perform full CRUD operations (Create, Read, Update, Delete) for managing student information efficiently.',
       techStack: ['Java', 'MySQL'],
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
       demoUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
