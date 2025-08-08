@@ -32,8 +32,8 @@ const Projects: React.FC = () => {
       detailedDescription: 'A dynamic Student Database Management System built using Java and MySQL, designed to perform full CRUD operations (Create, Read, Update, Delete) for managing student information efficiently.',
       techStack: ['Java', 'MySQL'],
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
-      githubUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
+      demoUrl: 'https://github.com/karthi2006-46/StudentDataBase.git',
+      githubUrl: 'https://github.com/karthi2006-46/StudentDataBase.git',
       featured: false,
     },
     {
