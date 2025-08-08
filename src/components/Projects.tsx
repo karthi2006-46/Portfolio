@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
       demoUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
       githubUrl: 'https://github.com/karthi2006-46/studentdatabse.git',
-      featured: true,
+      featured: false,
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
       demoUrl: '#', // ✅ Put actual link
       githubUrl: 'https://github.com/karthi2006-46/portfoliokarthi.git',  // ✅ Check this is correct
-      featured: true,
+      featured: false,
     },
 
       {
@@ -127,9 +127,9 @@ const Projects: React.FC = () => {
           className="max-w-7xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            Projects
+            </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               A collection of projects that showcase my skills and passion for creating exceptional digital experiences.
             </p>
