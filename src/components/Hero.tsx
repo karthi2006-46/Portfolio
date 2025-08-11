@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
 
             {/* View Resume Button */}
             <motion.a
-              href="public/certificates/resume.pdf" // Ensure the path is correct
+              href="/certificates/resume.pdf" // Ensure the path is correct
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

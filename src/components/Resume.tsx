@@ -65,7 +65,7 @@ const Resume: React.FC = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'public/certificates/resume.pdf';
+    link.href = '/certificates/resume.pdf';
     link.download = 'Karthikeyan_Resume.pdf';
     link.click();
   };
