@@ -1,7 +1,7 @@
 # 💼 Personal Portfolio Website
 
 ### 🚀 Live Demo  
-🔗 [View Portfolio](https://celebrated-meringue-b7f451.netlify.app/)  
+🔗 [View Portfolio](https://portfoliokarthi2025.netlify.app)  
 📁 [GitHub Repository](https://github.com/karthi2006-46/portfoliokarthi.git)
 
 ---
