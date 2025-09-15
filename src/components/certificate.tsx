@@ -293,3 +293,4 @@ const Certificates: React.FC = () => {
 };
 
 export default Certificates;
+
