@@ -116,7 +116,8 @@ const Contact: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+
             {/* Contact Info */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -140,9 +141,10 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-white/60 text-sm">{info.label}</p>
-                        <p className="text-white font-semibold group-hover:text-pink-300 transition-colors">
-                          {info.value}
-                        </p>
+<p className="text-white font-semibold group-hover:text-pink-300 transition-colors break-all text-sm sm:text-base">
+  {info.value}
+</p>
+
                       </div>
                     </motion.a>
                   ))}

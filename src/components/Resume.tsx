@@ -59,6 +59,7 @@ const Resume: React.FC = () => {
     // 'Apolo Certified Solutions Architect',
     // 'Java Developer Certification',
     'Software Testing - 2024',
+    'AI and LIFE SKILLS(Self Development) -2025',
     'Currently pursuing Java Full Stack Development – 2025'
     // 'Open Source Contributor - 50+ repositories',
   ];

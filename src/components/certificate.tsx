@@ -26,15 +26,23 @@ const Certificates: React.FC = () => {
       title: 'SOFTWARE TESTING  (Both Manual and Automated)',
       organization: 'TAMILNADU ADVANCED TECHNICAL TRAINING INSTITUTE',
       date: '2024-11-19',
-      category: 'Testing',
+      category: 'TESTING', 
       image: 'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
       pdfUrl: '/certificates/testing.pdf',
       description: 'Validates expertise in designing distributed systems on AWS platform.',
       skills: ['SDLC & STLC', 'Test Case Design', 'Bug Reporting and Tracking','Java / Python ', 'Requirement Analysis'],
     },
-    // {
-    //   id: 2, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
-    // },
+    {
+      id: 2, 
+      title: 'AI AND LIFE AND EMPLOYABILITY SKILLS', 
+      organization: ' MAGIC BUS INDIA FOUNDATION  (supported by CISCO) ',
+       date: '2025-09-1', 
+       category: 'SELF DEVELOPMENT',
+        image: 'https://media.istockphoto.com/id/1128571392/photo/self-development-motivational-words-quotes-concept.jpg?s=612x612&w=0&k=20&c=UGtd_Udk2a5jc3UiLyvYHlseKwPUZDV2J54d7FLR9Zg=',
+         pdfUrl: '/certificates/AI LIFE SKILLS.pdf', 
+         description: 'Participated in the AI and Life and Employability Skills program by Magic Bus India Foundation, supported by Cisco, to learn about AI basics and key job-ready skills.',
+          skills: ['AI Basics • Communication • Teamwork • Problem Solving • Time Management • Career Readiness'],
+    },
     // {
     //   id: 3, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
     // },
@@ -43,7 +51,7 @@ const Certificates: React.FC = () => {
     // },
   ];
 
-  const categories = ['All', 'Testing'];
+  const categories = ['All', 'TESTING','SELF DEVELOPMENT'];
   // , 'Web Development', 'AI/ML', 'DevOps', ];
 
   const filteredCertificates = activeFilter === 'All'
@@ -182,15 +190,15 @@ const Certificates: React.FC = () => {
               </div>
               <div className="grid md:grid-cols-4 gap-6 text-center">
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">1</div>
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">2</div>
                   <div className="text-white/80">Total Certificates</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">1</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">2</div>
                   <div className="text-white/80">Specialization Areas</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-green-400 mb-2">2024</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">2025</div>
                   <div className="text-white/80">Latest Certification</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
@@ -274,14 +282,14 @@ const Certificates: React.FC = () => {
                     <ExternalLink className="w-5 h-5" />
                     <span>View Certificate</span>
                   </motion.a>
-                  <motion.button
+                  {/* <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center space-x-2 px-6 py-3 border-2 border-white/30 rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300"
                   >
                     <Award className="w-5 h-5" />
                     <span>Verify</span>
-                  </motion.button>
+                  </motion.button> */}
                 </div>
               </div>
             </motion.div>

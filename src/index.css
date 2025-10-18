@@ -290,6 +290,7 @@ select:focus {
 }
 
 /* Print styles */
+  
 @media print {
   body {
     background: white;

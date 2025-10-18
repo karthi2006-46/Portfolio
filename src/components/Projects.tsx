@@ -36,17 +36,17 @@ const Projects: React.FC = () => {
       githubUrl: 'https://github.com/karthi2006-46/StudentDataBase.git',
       featured: false,
     },
-    {
-      id: 2,
-      title: 'Portfolio Website',
-      description: 'Interactive 3D portfolio with advanced animations',
-      detailedDescription: 'A cutting-edge portfolio website featuring 3D animations...',
-      techStack: ['React', 'Three.js', 'Framer Motion', 'GSAP', 'WebGL'],
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      demoUrl: '#', // ✅ Put actual link
-      githubUrl: 'https://github.com/karthi2006-46/portfoliokarthi.git',  // ✅ Check this is correct
-      featured: false,
-    },
+    // {
+    //   id: 2,
+    //   title: 'Portfolio Website',
+    //   description: 'Interactive 3D portfolio with advanced animations',
+    //   detailedDescription: 'A cutting-edge portfolio website featuring 3D animations...',
+    //   techStack: ['React', 'Three.js', 'Framer Motion', 'GSAP', 'WebGL'],
+    //   image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   demoUrl: '#', // ✅ Put actual link
+    //   githubUrl: 'https://github.com/karthi2006-46/portfoliokarthi.git',  // ✅ Check this is correct
+    //   featured: false,
+    // },
 
       {
       id: 3,
