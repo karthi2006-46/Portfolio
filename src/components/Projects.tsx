@@ -25,8 +25,32 @@ const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
+  {
+  id: 1,
+  title: 'BUYZIO – E-Commerce Website',
+  description: 'A full-featured e-commerce web application built with Django and MySQL.',
+  detailedDescription:
+    'BUYZIO is a modern, full-stack e-commerce platform developed using Django (Python) and MySQL. It includes secure user authentication, product and category management, shopping cart and wishlist functionality, responsive UI with Bootstrap 5, and interactive SweetAlert2 notifications. The project focuses on clean architecture, scalability, and a premium mobile-friendly user experience.',
+  techStack: [
+    'Python',
+    'Django',
+    'MySQL',
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'Bootstrap 5',
+    'SweetAlert2',
+    'Font Awesome'
+  ],
+  image:
+    'https://images.pexels.com/photos/6214474/pexels-photo-6214474.jpeg',
+  demoUrl: 'https://buyzio.up.railway.app',
+  githubUrl: 'https://github.com/karthi2006-46/Buyzio-Ecommerce-website-',
+  featured: true,
+},
+
     {
-      id: 1,
+      id: 2,
       title: 'Student Database',
       description: 'Curd operations to add,delete,view,update',
       detailedDescription: 'A dynamic Student Database Management System built using Java and MySQL, designed to perform full CRUD operations (Create, Read, Update, Delete) for managing student information efficiently.',
@@ -59,17 +83,7 @@ const Projects: React.FC = () => {
       githubUrl: 'https://github.com/karthi2006-46/Event.git',
       featured: false,
     },
-    // {
-    //   id: 4,
-    //   title: 'Weather App',
-    //   description: 'Beautiful weather app with location-based forecasts',
-    //   detailedDescription: 'A sleek weather application featuring location-based forecasts, interactive maps, weather alerts, and detailed meteorological data.',
-    //   techStack: ['React Native', 'OpenWeather API', 'Maps SDK', 'Redux'],
-    //   image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   demoUrl: '#',
-    //   githubUrl: '#',
-    //   featured: false,
-    // },
+    
     // {
     //   id: 5,
     //   title: 'Task Management App',
