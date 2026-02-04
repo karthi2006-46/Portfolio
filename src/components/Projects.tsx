@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
   ],
   image:
     'https://images.pexels.com/photos/6214474/pexels-photo-6214474.jpeg',
-  demoUrl: 'https://buyzio.up.railway.app',
+  demoUrl: 'https://buyzio.onrender.com',
   githubUrl: 'https://github.com/karthi2006-46/Buyzio-Ecommerce-website-',
   featured: true,
 },
