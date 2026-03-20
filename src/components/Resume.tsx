@@ -35,7 +35,7 @@ const Resume: React.FC = () => {
     {
       institution: 'Dr. M.G.R. Educational And Research Institute',
       degree: 'Bachelor of Computer Applications (BCA)',
-      period: '2025 ("Pursuing")',
+      period: '2026 ("Pursuing")',
       description:
         'Currently pursuing BCA with a focus on programming, web development, and database management. Gaining practical knowledge through academic projects and continuous hands-on learning in technologies such as Java, HTML/CSS, SQL, and JavaScript.',
     },
@@ -60,7 +60,6 @@ const Resume: React.FC = () => {
     // 'Java Developer Certification',
     'Software Testing - 2024',
     'AI and LIFE SKILLS(Self Development) -2025',
-    'Currently pursuing Java Full Stack Development – 2025'
     // 'Open Source Contributor - 50+ repositories',
   ];
 

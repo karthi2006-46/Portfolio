@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import CodingProfiles from './components/certificate';
+import CodingProfiles from './components/certificate';  
 import SocialMedia from './components/SocialMedia';
 import ParticleBackground from './components/ParticleBackground';
 import './index.css';

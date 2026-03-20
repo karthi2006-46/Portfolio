@@ -21,37 +21,54 @@ const Certificates: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const certificates: Certificate[] = [
+        {
+  id: 1,
+  title: 'Java Full Stack Development Course',
+  organization: 'Apollo Computer Education Ltd',
+  date: '09 Mar 2026',
+  category: 'FULL STACK DEVELOPMENT',
+  image: '/certificates/JavaFS.jpg',
+  pdfUrl: '/certificates/JavaFS.jpg',
+  description: 'Completed Java Full Stack Development course with A+ grade, including Core Java, Advanced Java, and web technologies.',
+  skills: ['Core Java', 'Advanced Java', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'SQL Server']
+},
     {
-      id: 1,
+  id: 2,
+  title: 'Full Stack Web Development Training',
+  organization: 'IntrnForte',
+  date: '24 Nov 2025',
+  category: 'FULL STACK DEVELOPMENT',
+  image: '/certificates/interforte.png',
+  pdfUrl: '/certificates/Webdevelopment.pdf',
+  description: 'Successfully completed Full Stack Web Development training program covering frontend and backend technologies.',
+  skills: ['HTML', 'CSS', 'JavaScript', 'Full Stack Development']
+},
+    {
+      id: 3,
       title: 'SOFTWARE TESTING  (Both Manual and Automated)',
       organization: 'TAMILNADU ADVANCED TECHNICAL TRAINING INSTITUTE',
       date: '2024-11-19',
       category: 'TESTING', 
-      image: 'https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg',
-      pdfUrl: '/certificates/testing.pdf',
+      image: '/certificates/Testing.jpg',
+      pdfUrl: '/certificates/Testing.jpg',
       description: 'Validates expertise in designing distributed systems on AWS platform.',
       skills: ['SDLC & STLC', 'Test Case Design', 'Bug Reporting and Tracking','Java / Python ', 'Requirement Analysis'],
     },
     {
-      id: 2, 
+      id: 4, 
       title: 'AI AND LIFE AND EMPLOYABILITY SKILLS', 
       organization: ' MAGIC BUS INDIA FOUNDATION  (supported by CISCO) ',
        date: '2025-09-1', 
        category: 'SELF DEVELOPMENT',
-        image: 'https://media.istockphoto.com/id/1128571392/photo/self-development-motivational-words-quotes-concept.jpg?s=612x612&w=0&k=20&c=UGtd_Udk2a5jc3UiLyvYHlseKwPUZDV2J54d7FLR9Zg=',
-         pdfUrl: '/certificates/AI LIFE SKILLS.pdf', 
+        image: '/certificates/selfdev.jpg',
+         pdfUrl: '/certificates/selfdev.jpg', 
          description: 'Participated in the AI and Life and Employability Skills program by Magic Bus India Foundation, supported by Cisco, to learn about AI basics and key job-ready skills.',
           skills: ['AI Basics • Communication • Teamwork • Problem Solving • Time Management • Career Readiness'],
     },
-    // {
-    //   id: 3, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
-    // },
-    // {
-    //   id: 4, title: '', organization: '', date: '', category: '', image: '', pdfUrl: '#', description: '', skills: [''],
-    // },
+   
   ];
 
-  const categories = ['All', 'TESTING','SELF DEVELOPMENT'];
+  const categories = ['All','FULL STACK DEVELOPMENT','TESTING','SELF DEVELOPMENT'];
   // , 'Web Development', 'AI/ML', 'DevOps', ];
 
   const filteredCertificates = activeFilter === 'All'
@@ -160,6 +177,18 @@ const Certificates: React.FC = () => {
                       </div>
                     </div>
                     <div className="p-4">
+                      <div className="mt-3">
+  <a
+    href={certificate.pdfUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    className="flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg text-white text-sm font-semibold hover:scale-105 transition-all duration-300"
+  >
+    <ExternalLink className="w-4 h-4" />
+    <span>View Certificate</span>
+  </a>
+</div>
                       <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-yellow-300 transition-colors">
                         {certificate.title}
                       </h3>
@@ -190,15 +219,15 @@ const Certificates: React.FC = () => {
               </div>
               <div className="grid md:grid-cols-4 gap-6 text-center">
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">2</div>
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">4</div>
                   <div className="text-white/80">Total Certificates</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">2</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">4</div>
                   <div className="text-white/80">Specialization Areas</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
-                  <div className="text-3xl font-bold text-green-400 mb-2">2025</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">2026</div>
                   <div className="text-white/80">Latest Certification</div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">

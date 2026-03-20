@@ -48,7 +48,7 @@ const SocialMedia: React.FC = () => {
       platform: 'LinkedIn',
       username: 'karthikeyan',
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/karthikeyan-r-r-5349a028a/',
+      url: 'https://www.linkedin.com/in/karthikeyan-r-r-a64531337/  ',
       color: 'from-blue-600 to-blue-800',
       description: 'Professional network and career updates',
     },
