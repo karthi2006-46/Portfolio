@@ -96,21 +96,21 @@ const Skills: React.FC = () => {
   name: 'AWS EC2',
   level: 85,
   category: ['Cloud', 'Backend'],
-  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpKiflwwqcS7ZQO3H7BXu9L2UfSgb9z_wyQ&s',
   color: '#FF9900'
 },
 {
   name: 'AWS RDS',
   level: 80,
   category: ['Cloud', 'Database'],
-  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4guEC7k0rYlpVXGaci25rklvZNom9px0yQQ&s',
   color: '#527FFF'
 },
 {
   name: 'AWS S3',
   level: 75,
   category: ['Cloud', 'Storage'],
-  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  logo: 'https://cdn.worldvectorlogo.com/logos/amazon-s3-simple-storage-service.svg',
   color: '#569A31'
 }
 
