@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
     threshold: 0.1,
   });
 
-  const categories = ['All', 'Frontend', 'Backend', 'Language', 'Database', 'Version Control','IDE'];
+  const categories = ['All', 'Frontend', 'Backend', 'Language', 'Database','Cloud' ,'Version Control','IDE'];
   const [activeFilter, setActiveFilter] = React.useState('All');
 
   const skills = [
@@ -84,7 +84,35 @@ const Skills: React.FC = () => {
     category: 'IDE',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg',
     color: '#2C2255'
-  }
+  },
+  {
+  name: 'Amazon Web Services',
+  level: 80,
+  category: ['Cloud'],
+  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+  color: '#FF9900'
+},
+{
+  name: 'AWS EC2',
+  level: 85,
+  category: ['Cloud', 'Backend'],
+  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  color: '#FF9900'
+},
+{
+  name: 'AWS RDS',
+  level: 80,
+  category: ['Cloud', 'Database'],
+  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  color: '#527FFF'
+},
+{
+  name: 'AWS S3',
+  level: 75,
+  category: ['Cloud', 'Storage'],
+  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg',
+  color: '#569A31'
+}
 
 
 

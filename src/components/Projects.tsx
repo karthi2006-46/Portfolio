@@ -25,8 +25,45 @@ const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
-  {
+    {
   id: 1,
+  title: 'Lost & Found Portal',
+  description: 'Full-stack web application to report and manage lost & found items',
+  
+  detailedDescription: `
+  The Lost & Found Portal is a full-stack web application developed using Java Spring Boot and MySQL. 
+  It allows users to report lost items and post found items with details such as title, location, and description. 
+  Admin users can manage and verify posts.
+
+  The application is deployed on AWS using EC2 for backend hosting and RDS for database management. 
+  Nginx is used as a reverse proxy and HTTPS is enabled using Let's Encrypt SSL certificate. 
+  CI/CD is implemented using GitHub Actions for automatic deployment.
+  `,
+
+  techStack: [
+    'Java',
+    'Spring Boot',
+    'Spring Security',
+    'Hibernate (JPA)',
+    'MySQL (AWS RDS)',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'AWS EC2',
+    'Nginx',
+    'GitHub Actions (CI/CD)'
+  ],
+
+  image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+
+  demoUrl: 'https://lostfoundportal.in',   // 🔥 YOUR LIVE SITE
+
+  githubUrl: 'https://github.com/karthi2006-46/Lost-and-Found-Portal',
+
+  featured: true
+},
+  {
+  id: 2,
   title: 'BUYZIO – E-Commerce Website',
   description: 'A full-featured e-commerce web application built with Django and MySQL.',
   detailedDescription:
@@ -50,7 +87,7 @@ const Projects: React.FC = () => {
 },
 
     {
-      id: 2,
+      id: 3,
       title: 'Student Database',
       description: 'Curd operations to add,delete,view,update',
       detailedDescription: 'A dynamic Student Database Management System built using Java and MySQL, designed to perform full CRUD operations (Create, Read, Update, Delete) for managing student information efficiently.',
@@ -73,7 +110,7 @@ const Projects: React.FC = () => {
     // },
 
       {
-      id: 3,
+      id: 4,
       title: ' Event Registration Form',
       description: 'A simple and responsive HTML & CSS form for user registration to an event.',
       detailedDescription: 'A clean, user-friendly web form built with HTML and styled using CSS, designed to collect participant details such as name, email, contact number, and event preferences for seamless event registration.',
