@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
     'GitHub Actions (CI/CD)'
   ],
 
-  image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+  image: 'public/projects images/lostfound.png',
 
   demoUrl: 'https://lostfoundportal.in',   // 🔥 YOUR LIVE SITE
 
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
     'Font Awesome'
   ],
   image:
-    'https://images.pexels.com/photos/6214474/pexels-photo-6214474.jpeg',
+    'public/projects images/buyzio.png',
   demoUrl: 'https://buyzio.onrender.com',
   githubUrl: 'https://github.com/karthi2006-46/Buyzio-Ecommerce-website-',
   featured: true,

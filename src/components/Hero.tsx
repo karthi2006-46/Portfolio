@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
           {/* Roles as Equal-Size Badges */}
           <div className="flex flex-wrap gap-3 mb-8 justify-center md:justify-start">
-            {['Java Learner', 'Frontend Developer', 'AI Enthusiast', 'Full Stack Student'].map((role) => (
+            {['Java Learner', 'Full Stack Developer', 'AI Enthusiast', 'Java Developer'].map((role) => (
               <span
                 key={role}
                 className="bg-white/10 text-white text-sm px-4 py-2 rounded-full font-medium shadow-md border border-white/20"
