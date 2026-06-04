@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
     'GitHub Actions (CI/CD)'
   ],
 
-  image: 'public/projects images/lostfound.png',
+  image: '/projects-images/lostfound.png',
 
   demoUrl: 'https://lostfoundportal.in',   // 🔥 YOUR LIVE SITE
 
@@ -79,8 +79,7 @@ const Projects: React.FC = () => {
     'SweetAlert2',
     'Font Awesome'
   ],
-  image:
-    'public/projects images/buyzio.png',
+  image: '/projects-images/buyzio.png',
   demoUrl: 'https://buyzio.onrender.com',
   githubUrl: 'https://github.com/karthi2006-46/Buyzio-Ecommerce-website-',
   featured: true,
