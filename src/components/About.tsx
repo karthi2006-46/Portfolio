@@ -81,11 +81,16 @@ const About: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 text-white">My Journey</h3>
                 <p className="text-white/80 mb-4 leading-relaxed">
-                  "Hi, I'm Karthikeyan R R, a BCA student passionate about Java Full Stack Development, with skills in HTML, CSS, MySQL, and Software Testing. I'm eager to apply my knowledge through real-world projects and internships."
-                </p>
-                <p className="text-white/80 leading-relaxed">
-                  I specialize in Java,MySQL, and modern web technologies, always staying up-to-date with the latest trends and best practices. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
-                </p>
+  I am a BCA graduate and an aspiring Java Full Stack Developer with hands-on experience in Java, Spring Boot, Angular, React, MySQL, HTML, CSS, JavaScript, and REST APIs.
+</p>
+
+<p className="text-white/80 mb-4 leading-relaxed">
+  I completed my Java Full Stack Development training at Applo Institute and a Frontend Development Internship at TVK Technologies. Through these experiences, I developed real-world projects including a Lost & Found Portal, BUYZIO E-Commerce Platform, Online Examination & Learning Management System, and a Certificate Generator System.
+</p>
+
+<p className="text-white/80 leading-relaxed">
+  I am passionate about building scalable and user-friendly applications, continuously learning new technologies, and seeking opportunities to grow as a Java Full Stack Developer while contributing to impactful software solutions.
+</p>
               </div>
             </motion.div>
 

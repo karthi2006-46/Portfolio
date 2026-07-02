@@ -84,9 +84,36 @@ const Projects: React.FC = () => {
   githubUrl: 'https://github.com/karthi2006-46/Buyzio-Ecommerce-website-',
   featured: true,
 },
+{
+  id: 3,
+  title: 'Online Examination & Learning Management System',
+  description: 'A comprehensive Spring Boot-based platform for online learning, course management, and examinations.',
+  detailedDescription:
+    'A full-stack Learning Management System (LMS) developed using Java Spring Boot and MySQL. The platform enables Admin, Faculty, and Students to manage courses, enrollments, study materials, progress tracking, and online examinations. Features include JWT Authentication, Role-Based Access Control, course extension requests, exam management with MCQ questions, result tracking, and responsive dashboards. The project follows a layered architecture using Spring Boot best practices and RESTful APIs.',
+  techStack: [
+    'Java 17',
+    'Spring Boot',
+    'Spring Security',
+    'JWT Authentication',
+    'Spring Data JPA',
+    'MySQL',
+    'HTML5',
+    'CSS3',
+    'Bootstrap 5',
+    'JavaScript',
+    'REST APIs',
+    'Maven',
+    'Git',
+    'GitHub'
+  ],
+  image: '/projects-images/online-exam-system.jpg',
+  demoUrl: '#',
+  githubUrl: 'https://github.com/karthi2006-46/online-exam-system',
+  featured: true,
+},
 
     {
-      id: 3,
+      id: 4,
       title: 'Student Database',
       description: 'Curd operations to add,delete,view,update',
       detailedDescription: 'A dynamic Student Database Management System built using Java and MySQL, designed to perform full CRUD operations (Create, Read, Update, Delete) for managing student information efficiently.',
@@ -109,7 +136,7 @@ const Projects: React.FC = () => {
     // },
 
       {
-      id: 4,
+      id: 5,
       title: ' Event Registration Form',
       description: 'A simple and responsive HTML & CSS form for user registration to an event.',
       detailedDescription: 'A clean, user-friendly web form built with HTML and styled using CSS, designed to collect participant details such as name, email, contact number, and event preferences for seamless event registration.',

@@ -33,12 +33,12 @@ const Resume: React.FC = () => {
 
   const education = [
     {
-      institution: 'Dr. M.G.R. Educational And Research Institute',
-      degree: 'Bachelor of Computer Applications (BCA)',
-      period: '2026 ("Pursuing")',
-      description:
-        'Currently pursuing BCA with a focus on programming, web development, and database management. Gaining practical knowledge through academic projects and continuous hands-on learning in technologies such as Java, HTML/CSS, SQL, and JavaScript.',
-    },
+  institution: 'Dr. M.G.R. Educational And Research Institute',
+  degree: 'Bachelor of Computer Applications (BCA)',
+  period: '2023 - 2026',
+  description:
+    'Graduated with a Bachelor of Computer Applications (BCA), building a strong foundation in programming, web development, database management, and software engineering. Gained hands-on experience through academic and personal projects using Java, Spring Boot, Angular, React, MySQL, HTML, CSS, and JavaScript.',
+},
     {
       institution: 'ICF Higher Secondary School',
       degree: 'HSC – Higher Secondary Certificate',
@@ -66,7 +66,7 @@ const Resume: React.FC = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = '/certificates/resume.pdf';
-    link.download = 'Karthikeyan_Resume.pdf';
+    link.download = 'Karthikeyan_RR_Java_Full_Stack_Developer_Resume.pdf';
     link.click();
   };
 
